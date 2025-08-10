@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.DashboardController"
+            style="-fx-background-color: #f0f0f0; -fx-padding: 20;">
+
+    <top>
+        <Label text="لوحة التحكم" style="-fx-font-size: 24px; -fx-text-fill: #2a2a2a;"/>
+    </top>
+
+    <center>
+        <VBox spacing="15">
+            <HBox spacing="10">
+                <Button text="المشتركين" onAction="#navigateSubscribers"/>
+                <Button text="الاشتراكات" onAction="#navigateSubscriptions"/>
+                <Button text="الدفعات" onAction="#navigatePayments"/>
+                <Button text="الإحصائيات" onAction="#navigateStats"/>
+            </HBox>
+            <Label fx:id="summaryLabel" text="تحميل ملخص النظام..." style="-fx-font-size: 16px;"/>
+        </VBox>
+    </center>
+</BorderPane>

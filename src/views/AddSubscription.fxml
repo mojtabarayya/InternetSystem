@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:controller="controllers.AddSubscriptionController"
+          xmlns:fx="http://javafx.com/fxml"
+          hgap="10" vgap="10"
+          alignment="CENTER" style="-fx-padding: 20;">
+
+    <Label text="رقم المشترك:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="subscriberIdField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label text="الشهر:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="monthComboBox" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="سنة الاشتراك:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="yearField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Button text="تسجيل الاشتراك" onAction="#handleAddSubscription"
+            GridPane.rowIndex="3" GridPane.columnIndex="1"
+            style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+</GridPane>

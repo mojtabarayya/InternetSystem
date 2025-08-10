@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.PaymentHistoryController"
+      spacing="10" style="-fx-padding: 20; -fx-background-color: #ffffff;">
+
+    <HBox spacing="10">
+        <Label text="رقم المشترك:"/>
+        <TextField fx:id="subscriberIdField" promptText="أدخل رقم المشترك"/>
+        <Button text="عرض السجل" onAction="#handleLoadPayments"/>
+    </HBox>
+
+    <TableView fx:id="paymentTable" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="dateCol" text="تاريخ الدفع"/>
+            <TableColumn fx:id="amountCol" text="المبلغ"/>
+            <TableColumn fx:id="methodCol" text="طريقة الدفع"/>
+            <TableColumn fx:id="statusCol" text="الحالة"/>
+        </columns>
+    </TableView>
+    <Button text="تصدير التقرير"
+            onAction="#handleExportReport"
+            style="-fx-background-color: #27ae60; -fx-text-fill: white;"/>
+</VBox>
